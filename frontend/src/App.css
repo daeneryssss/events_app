@@ -1,0 +1,293 @@
+@import './Reset.css';
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+@import '@fortawesome/fontawesome-free/css/all.css';
+
+/* common styles */
+
+body {
+  /* variables */
+  --head-bg-col: #FFF4DD;
+  --main-font-col: #472300;
+
+  font-family: "Comfortaa", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: var(--main-font-col);
+}
+
+.Container {
+  margin: 1%;
+}
+
+/* header styles */
+
+.Header {
+  background-color: var(--head-bg-col);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: sticky;
+  top: 0;
+}
+
+.HeaderText {
+  font-size: 26px;
+}
+
+.Menu {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.MenuItem {
+  padding: 4% 2%;
+  height: 100%;
+}
+
+.MenuItem:hover {
+  background-color: var(--main-font-col);
+  color: var(--head-bg-col);
+}
+
+/* footer styles */
+
+.Footer {
+  background-color: var(--head-bg-col);
+  padding: 2%;
+}
+
+.FooterText {
+  text-align: center;
+  margin: 1%;
+  font-size: 14px;
+}
+
+.FooterText a {
+  font-weight: 900;
+}
+
+.FooterText a:hover {
+  text-decoration: underline;
+}
+
+/* main page styles*/
+
+.EventsList {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.EventSection {
+  background-color: var(--head-bg-col);
+  width: 27%;
+  height: fit-content;
+  min-height: 510px;
+  margin: 2%;
+  padding: 1%;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.EventSectionImage {
+  width: 60%;
+  align-self: center;
+}
+
+.EventSectionName {
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.EventSectionDate, .EventSectionTime, .EventSectionPlace {
+  font-size: 16px;
+}
+
+.EventSectionText {
+  font-size: 14px;
+}
+
+.EventSectionDate::before, .EventDate::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f073  ";
+}
+
+.EventSectionTime::before, .EventTime::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f017  ";
+}
+
+.EventSectionPlace::before, .EventPlace::before {
+  font-family: "Font Awesome 6 Free";
+  content: "\f14e  ";
+}
+
+.EventSectionLink {
+  text-align: end;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.EventSectionLink:hover {
+  text-decoration: underline;
+}
+
+/* event page styles */
+
+.Event {
+  margin: 1% 22%;
+  line-height: 2;
+  width: 50vw;
+  background-color: var(--head-bg-col);
+  border: var(--main-font-col) 1px solid;
+  padding: 2%;
+}
+
+.EventContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 2%;
+}
+
+.EventInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-right: 2%;
+}
+
+.EventName {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.EventDate, .EventTime, .EventPlace {
+  font-style: italic;
+  font-size: 18px;
+}
+
+.EventImage {
+  height: 300px;
+}
+
+.EventChoice {
+  display: block;
+}
+
+.EventButton {
+  margin: 0 43%;
+  font-size: 16px;
+  width: 15%;
+  min-width: fit-content;
+}
+
+.EventSectionNumbers {
+  display: inline-block;
+  text-align: center;
+  padding: 1% 0;
+}
+
+.BarContainer {
+  width: 100%;
+}
+
+.EventSectionNumbersGo {
+  background-color: #51fd51;
+}
+
+.EventSectionNumbersNotGo {
+  background-color: #fd5151;
+}
+
+/* calendar page styles */
+
+.PageHeader {
+  font-weight: 700;
+  text-align: center;
+  font-size: 20px;
+  padding: 1%;
+}
+
+.CalendarContainer {
+  width: 88%;
+  margin: 0 6%;
+  font-size: 16px;
+  text-align: center;
+  background-color: var(--head-bg-col);
+}
+
+.react-calendar__navigation {
+  display: flex;
+
+  .react-calendar__navigation__label {
+    font-weight: bold;
+  }
+
+  .react-calendar__navigation__arrow {
+    flex-grow: 0.333;
+  }
+
+  .react-calendar__navigation__label, .react-calendar__navigation__arrow {
+    height: 30px;
+  }
+}
+
+.react-calendar__month-view__days {
+  display: grid !important;
+  grid-template-columns: 14.2% 14.2% 14.2% 14.2% 14.2% 14.2% 14.2%; 
+
+  .react-calendar__tile {
+    max-width: initial !important;
+  }
+}
+
+.CalendarContainer button {
+  background-color: var(--main-font-col);
+  color: var(--head-bg-col);
+  margin: 2px;
+  border-radius: 5px;
+  font-size: 14px;
+  min-height: fit-content;
+  height: 75px;
+}
+
+.CalendarTileContent {
+  font-weight: 700;
+}
+
+.react-calendar__month-view__days__day--neighboringMonth {
+  opacity: 0.65;
+}
+
+.react-calendar__year-view__months, 
+  .react-calendar__decade-view__years, 
+  .react-calendar__century-view__decades {
+    display: grid !important;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+
+    &.react-calendar__year-view__months {
+      grid-template-columns: 33.3% 33.3% 33.3%;
+    }
+
+    .react-calendar__tile {
+      max-width: initial !important;
+    }
+  }
+
+/* statistics page styles */
+
+.ChartSection {
+  height: 400px;
+  margin: 3% 22%;
+}
+
+.SectionHeader {
+  font-size: 16px;
+  margin: 1% 0;
+}
